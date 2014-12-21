@@ -18,7 +18,7 @@ function doIt() {
     source ~/.bash_profile
 
     # Git stuff
-    git config --global core.excludesfile '~/.gitignore'
+    git config --global core.excludesfile '~/.gitignore_global'
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
