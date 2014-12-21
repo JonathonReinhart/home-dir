@@ -19,6 +19,7 @@ function doIt() {
 
     # Git stuff
     git config --global core.excludesfile '~/.gitignore_global'
+    git config --global color.ui true
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
