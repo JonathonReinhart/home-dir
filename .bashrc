@@ -11,3 +11,4 @@ fi
 # User specific aliases and functions
 alias ..='cd ..'
 alias cgrep='find . -type f -regex ".*\.\(c\|h\|s\|S\|py\)" -print0 | xargs -0 grep --color=auto -n'
+alias view='vim -R'
