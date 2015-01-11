@@ -17,5 +17,5 @@ filetype plugin indent on
 " Scons files are Scons files.
 au BufNewFile,BufRead SCons* set filetype=scons
 
-
-
+" Enable line numbers
+set number
