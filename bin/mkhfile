@@ -1,0 +1,28 @@
+#!/usr/bin/python
+import sys
+import os, os.path
+
+def main():
+    if len(sys.argv) < 2:
+        print 'Usage: {0} headername'.format(APPNAME)
+        return 1
+
+    name = sys.argv[1]
+    filename = '{0}.h'.format(name)
+
+    if os.path.exists(filename):
+        print 'ERROR: {0} exists'.format(filename)
+        return 1
+
+    with open(filename, 'w') as f:
+        incl_guard = '__{0}_H__'.format(name.upper())
+        f.write('#ifndef ' + incl_guard + '\n')
+        f.write('#define ' + incl_guard + '\n')
+        f.write('\n\n\n')
+        f.write('#endif  /* ' + incl_guard + ' */\n')
+
+    return 0
+
+APPNAME = os.path.basename(sys.argv[0])
+if __name__ == '__main__':
+    sys.exit(main())
