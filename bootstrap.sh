@@ -20,6 +20,9 @@ function doIt() {
     # Git stuff
     git config --global core.excludesfile '~/.gitignore_global'
     git config --global color.ui true
+
+    # http://stackoverflow.com/questions/13385690/how-to-use-git-with-gnome-keyring-integration#comment44911565_21192134
+    git config --global credential.helper gnome-keyring
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
