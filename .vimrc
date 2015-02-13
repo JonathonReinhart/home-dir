@@ -3,7 +3,7 @@
 
 " Pressing return clears the search highlighting.
 " http://stackoverflow.com/a/662914
-nnoremap <silent> <CR> :nohlsearch<CR><CR>
+nnoremap <silent> <CR> :nohlsearch<CR>
 
 " There is a Holy War amoungst progammers regarding spaces vs. tabs.
 " Obviously the right answer is spaces. Four of them.
@@ -19,3 +19,6 @@ au BufNewFile,BufRead SCons* set filetype=scons
 
 " Enable line numbers
 set number
+
+" Keep cursor centered vertically-ish on the screen
+set scrolloff=7
