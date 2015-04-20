@@ -10,3 +10,7 @@ fi
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 export PYTHONSTARTUP=~/.pystartup
+
+# http://stackoverflow.com/a/2596835/119527
+export VISUAL=vim
+export EDITOR="$VISUAL"
