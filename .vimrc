@@ -25,3 +25,6 @@ set scrolloff=7
 
 " Search up for a tags file (note the semicolon)
 set tags=tags;
+
+" Make comments italic
+hi Comment cterm=italic
