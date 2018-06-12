@@ -5,7 +5,7 @@
 " http://stackoverflow.com/a/662914
 nnoremap <silent> <CR> :nohlsearch<CR>
 
-" There is a Holy War amoungst progammers regarding spaces vs. tabs.
+" There is a Holy War amongst progammers regarding spaces vs. tabs.
 " Obviously the right answer is spaces. Four of them.
 set tabstop=4
 set shiftwidth=4
