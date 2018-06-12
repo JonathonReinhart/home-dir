@@ -28,3 +28,22 @@ set tags=tags;
 
 " Make comments italic
 hi Comment cterm=italic
+
+
+" Inspired by:
+" http://unix.stackexchange.com/a/75438
+" http://stackoverflow.com/a/7501902
+function! <SID>CleanupWhitespace()
+    let save_cursor = getpos(".")
+
+    " Strip trailing whitespace on lines
+    %s/\s\+$//e
+
+    " Remove empty lines at end of file
+    v/\_s*\S/d
+
+    call setpos(".", save_cursor)
+endfun
+
+" Automatically strip whitespace when saving source files
+autocmd BufWritePre * if &ft =~ 'sh\|perl\|python\|c\|cpp\|markdown' | :call <SID>CleanupWhitespace() | endif
