@@ -22,3 +22,6 @@ set number
 
 " Keep cursor centered vertically-ish on the screen
 set scrolloff=7
+
+" Search up for a tags file (note the semicolon)
+set tags=tags;
